@@ -10,10 +10,10 @@ interface error{
 export function ErrorFallback(props:Iprops) {
   const {error, resetErrorBoundary}=props
   return (
-    <div role="alert">
-      <p>Something went wrong:</p>
-      <pre>{error.message}</pre>
-      <button onClick={resetErrorBoundary}>Try again</button>
-    </div>
+    <>
+      <h2 className="text-danger">Something went wrong!</h2>
+      <h4>Random Number : {error.message}</h4>
+      <button className="border-1" onClick={resetErrorBoundary}>Re-Generate</button>
+    </>
   )
 }

@@ -12,7 +12,7 @@ const RandomNumberGenerator = (props:Iprops) => {
   useEffect(() => {
     if (random < 5) {
       setError(true);
-      throw new Error("Number is less than 5");
+      throw new Error(random+" (Less than 5)");
     } else {
       setError(false);
     }
@@ -20,8 +20,8 @@ const RandomNumberGenerator = (props:Iprops) => {
 
   return (
     <>
-      <h1>Number : {random}</h1>
-      <button onClick={generate}>Reset</button>
+      <h2>Number : {random}</h2>
+      <button className="border-1" onClick={generate}>Generate</button>
     </>
   );
 };

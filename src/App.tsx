@@ -12,7 +12,7 @@ function App() {
     setRandom(Math.floor(Math.random() * 20));
   };
   return (
-    <div className="App">
+    <div className="App p-3 mx-auto my-3 d-flex flex-column justify-content-between align-items-center">
       <ErrorBoundary FallbackComponent={ErrorFallback} resetKeys={[error]} onReset={() => {   setError(false); generate() }}>
         <RandomNumberGenerator random={random} generate={generate} setError={setError}/>
       </ErrorBoundary>
